@@ -24,3 +24,72 @@ A secure ATM simulation system with PIN verification, OTP authentication, and tr
 ```bash
 git clone https://github.com/yourusername/mini-atm.git
 cd mini-atm
+
+DEMO:
+Enter 10-digit account number: 1234567890
+Enter current balance: $5000
+Set 4-digit PIN: 1234
+
+---------------ATM MENU-------------
+1.Check balance
+2.Debit Amount  
+3.Credit Amount
+4.Transaction History
+5.Change PIN
+6.Exit
+
+Choose Option: 1
+Enter PIN: 1234
+Current balance: $5000
+
+Project Structure
+Mini-ATM-Python/
+├── Mini_ATM.py          # Main Python program
+├── README.md            # This documentation
+└── .gitattributes       # Git configuration
+
+Code Example
+# The account class handles all banking operations
+class account:
+    def __init__(self, accNo, balance, pin):
+        self.balance = balance
+        self.accNo = accNo
+        self.pin = pin
+        self.history = []
+        self.pin_attempts = 0
+        self.locked = False
+    
+    def verifyPin(self):
+        # Secure PIN verification with lockout
+        pass
+    
+    def debit(self, amount):
+        # Secure debit operation
+        pass
+
+🛠️ Technologies Used
+Python 3 - Core programming language
+
+OOP - Object-Oriented Programming
+
+Random Module - For OTP generation
+
+ Future Enhancements
+GUI interface using Tkinter
+
+Database integration
+
+Email/SMS OTP
+
+Web interface with Flask
+
+🤝 Contributing
+Feel free to fork and submit pull requests!
+
+📄 License
+MIT License
+
+👨‍💻 Author
+Aarav Saini
+
+GitHub: @aaravsaini2207-dev

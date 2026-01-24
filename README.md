@@ -20,7 +20,7 @@ A secure ATM simulation system with PIN verification, OTP authentication, and tr
 - Python 3.8 or higher
 
 ### Installation
-1. Clone the repository:
+
 ```bash
 git clone https://github.com/yourusername/mini-atm.git
 cd mini-atm

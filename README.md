@@ -22,7 +22,7 @@ A secure ATM simulation system with PIN verification, OTP authentication, and tr
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/mini-atm.git
+git clone https://github.com/aaravsaini2207/mini-atm.git
 cd mini-atm
 
 DEMO:

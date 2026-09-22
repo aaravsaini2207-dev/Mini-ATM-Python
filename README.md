@@ -1,98 +1,70 @@
-# 🏦 Mini ATM System - Python
+# Mini ATM System — Python
 
-A secure ATM simulation system with PIN verification, OTP authentication, and transaction history tracking.
+**Console-based ATM simulation built with Python and object-oriented programming, covering authentication, account operations, PIN management, and transaction history.**
 
-![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
-![Status](https://img.shields.io/badge/status-complete-green.svg)
-![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+> This is an early Python/OOP project focused on practicing classes, state management, validation, and control flow.
 
-## ✨ Features
-- 🔐 **Secure Authentication**: PIN + OTP verification
-- 💳 **Account Masking**: Shows only last 4 digits for security
-- 🔒 **Account Locking**: Locks after 3 incorrect PIN attempts
-- 📊 **Transaction History**: Tracks all debit/credit operations
-- 🔄 **PIN Management**: Secure PIN change with OTP verification
-- 💰 **Balance Operations**: Check, debit, and credit functions
+## Features
 
-## 🚀 Quick Start
+- **PIN verification** with a 3-attempt lockout
+- **OTP verification** for secure access and PIN changes
+- **Account masking** showing only the final four digits
+- **Balance operations** for debit, credit, and balance checks
+- **Transaction history** stored during the program session
+- **PIN management** with confirmation and validation
+- **Account validation** for 10-digit account numbers
 
-### Prerequisites
-- Python 3.8 or higher
+## Technical concepts
 
-### Installation
+**Python · OOP · Classes & Objects · Encapsulation · Conditional Logic · Loops · Lists · Input Validation · Random Module**
+
+The project is implemented primarily through an `account` class that maintains account state such as balance, PIN, lock status, PIN attempts, and transaction history.
+
+## Program flow
+
+```text
+Create Account
+     ↓
+Validate Account Number
+     ↓
+ATM Menu
+ ┌───┼───────────────┐
+ ↓   ↓   ↓   ↓   ↓   ↓
+Balance Debit Credit History PIN  Exit
+       ↓
+   PIN Verification
+       ↓
+  Update Account State
+```
+
+## Run locally
+
+Requirements:
+- Python 3.8+
 
 ```bash
-git clone https://github.com/aaravsaini2207/mini-atm.git
-cd mini-atm
+git clone https://github.com/aaravsaini2207-dev/Mini-ATM-Python.git
+cd Mini-ATM-Python
+python Mini_ATM.py
+```
 
-DEMO:
-Enter 10-digit account number: 1234567890
-Enter current balance: $5000
-Set 4-digit PIN: 1234
+The application runs entirely in the terminal and does not require external packages.
 
----------------ATM MENU-------------
-1.Check balance
-2.Debit Amount  
-3.Credit Amount
-4.Transaction History
-5.Change PIN
-6.Exit
+## Project structure
 
-Choose Option: 1
-Enter PIN: 1234
-Current balance: $5000
-
-Project Structure
+```text
 Mini-ATM-Python/
-├── Mini_ATM.py          # Main Python program
-├── README.md            # This documentation
-└── .gitattributes       # Git configuration
+├── Mini_ATM.py
+├── README.md
+└── .gitattributes
+```
 
-Code Example
-# The account class handles all banking operations
-class account:
-    def __init__(self, accNo, balance, pin):
-        self.balance = balance
-        self.accNo = accNo
-        self.pin = pin
-        self.history = []
-        self.pin_attempts = 0
-        self.locked = False
-    
-    def verifyPin(self):
-        # Secure PIN verification with lockout
-        pass
-    
-    def debit(self, amount):
-        # Secure debit operation
-        pass
+## Scope and limitations
 
-🛠️ Technologies Used
-Python 3 - Core programming language
+This is a **learning/demo application**, not a production banking system. Data is held in memory for the current session, and the OTP is printed to the console rather than delivered through an external authentication service.
 
-OOP - Object-Oriented Programming
+Potential extensions include database persistence, a GUI, external OTP delivery, stronger input validation, and automated tests.
 
-Random Module - For OTP generation
+## Author
 
- Future Enhancements
-GUI interface using Tkinter
-
-Database integration
-
-Email/SMS OTP
-
-Web interface with Flask
-
-🤝 Contributing
-Feel free to fork and submit pull requests!
-
-📄 License
-MIT License
-
-👨‍💻 Author
-Aarav Saini
-
-GitHub: @aaravsaini2207-dev
-
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/581b4872-402b-4c98-b8d8-0a0a3c4c2e53" />
-
+**Aarav Saini — @aaravsaini2207-dev**
